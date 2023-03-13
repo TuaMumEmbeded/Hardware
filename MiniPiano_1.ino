@@ -72,7 +72,7 @@ struct_message send_Data;
 void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
   Serial.print("\r\nLast Packet Send Status:\t");
   Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
-  if (status ==0){
+  if (status == 0){
     success = "Delivery Success :)";
   }
   else{
@@ -171,8 +171,8 @@ void loop()
 void piano(void *unused){
   for (;;){
     if (b1.isDown()){
-    ledcWriteNote(TONE_PWM_CHANNEL, NOTE_C, 5);
-    delay(50);
+      ledcWriteNote(TONE_PWM_CHANNEL, NOTE_C, 5);
+      delay(50);
     }
     else {
       ledcWriteTone(TONE_PWM_CHANNEL, 0);
