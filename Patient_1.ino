@@ -145,7 +145,7 @@ void loop() {
   digitalWrite(trigPin2, LOW);
   duration2 = pulseIn(echoPin2, HIGH);
 
-  if (((duration1 < 500) and (duration1 > 200)) or ((duration2 < 500) and (duration2 > 200))){
+  if (((duration1 < 400) and (duration1 > 200)) or ((duration2 < 400) and (duration2 > 200))){
     digitalWrite(red_led, HIGH);
     send_Data.red_led = 1;
     digitalWrite(buzzer, LOW);
